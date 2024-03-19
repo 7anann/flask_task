@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+ {% block content %}
+    <h1 class="h1 text-center">Login</h1> <br>
+<form method="post" action="">
+
+    <label class="form-control-label">Username</label>
+    <input class="form-control username form-control-lg" type="text" name="username" id="username"><br><br>
+
+    <label class="form-control-label">Password</label>
+    <input class="form-control password form-control-lg" type="password" name="password" id="password"><br><br>
+
+    <input class="btn btn-outline-info" type="submit" value="Login">
+
+</form>
+ <script src="static/js/jquery-3.5.1.min.js"></script>
+    <script>
+        $(".btn").click(function(){
+            var username = $(".username").val();
+            var password = $(".password").val();
+            $.ajax({
+                url: "/login",
+                type: "POST",
+                data: {"username": username, "password": password},
+                success: function(data){
+                    sessionStorage.setItem("token", data.access_token),
+                    sessionStorage.setItem("refree_token", data.refresh_token),
+                    console.log(data),
+                    console.log(sessionStorage.getItem("token"))
+                    console.log(sessionStorage.se)
+
+
+
+                }
+            })
+        });
+
+    </script>
+{% endblock %}

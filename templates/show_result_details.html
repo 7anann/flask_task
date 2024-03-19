@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+ {% block content %}
+ <h1 class="h1 text-center">Execution Result Details</h1><br>
+    <h3 class="h3 text-center text-secondary col">Test Case ID: {{ testresults.testcase_id }}</h3><br>
+    <h3 class="h3 text-center text-secondary col">Result: {{ testresults.result }}</h3><br>
+    <h3 class="h3 text-center text-secondary col">Execution Date: {{ testresults.exec_date }}</h3><br>
+    <br> <br>
+{% endblock %}

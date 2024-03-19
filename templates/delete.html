@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+ {% block content %}
+    <h1 class="h1 text-center">Delete Test Case</h1> <br>
+<h4>Please enter test case id you want to delete </h4>
+<form method="post" action="">
+<label class="form-control-label">Test Case ID</label>
+    <input class="form-control form-control-lg" type="text" name="id" id="id"><br><br>
+
+    <input class="btn btn-outline-danger" type="submit" value="Delete Test Case">
+    </form>
+{% endblock %}

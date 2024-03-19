@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+ {% block content %}
+<strong><h1 class="h1 text-center">Test Cases List</h1></strong>
+ <br>
+{% for test in testcases %}
+<div class="row">
+ <h3 class="h3 text-center text-secondary col">{{ test.id }}</h3>
+<h3 class="h3 text-center text-secondary col">{{ test.Title }}</h3>
+<h3 class="h3 text-center text-secondary col">{{ test.description }}</h3>
+<h3 class="h3 text-center text-secondary col">{{ test.test_asset }}</h3>
+<h3 class="h3 text-center text-secondary col">{{ test.dateCreated }}</h3>
+<br> <br>
+ </div>
+{% endfor %}
+{% endblock %}

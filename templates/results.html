@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+ {% block content %}
+<strong><h1 class="h1 text-center">Execution Results List</h1></strong>
+ <br>
+{% for res in results %}
+<div class="row">
+ <h3 class="h3 text-center text-secondary col">{{ res.res_id }}</h3>
+<h3 class="h3 text-center text-secondary col">{{ res.testcase.Title }}</h3>
+<h3 class="h3 text-center text-secondary col">{{ res.result }}</h3>
+<h3 class="h3 text-center text-secondary col">{{ res.exec_date }}</h3>
+<br> <br>
+ </div>
+{% endfor %}
+{% endblock %}

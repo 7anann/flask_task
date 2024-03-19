@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+ {% block content %}
+    <h1 class="h1 text-center">Update Test Case</h1> <br>
+<h4>Please enter test case id you want to update </h4>
+<form method="post" action="">
+<label class="form-control-label">Test Case ID</label>
+    <input class="form-control form-control-lg" type="text" name="id" id="id"><br><br>
+
+    <h5>Please enter new data</h5>
+     <label class="form-control-label">Title</label>
+    <input class="form-control form-control-lg" type="text" name="Title" id="Title"><br><br>
+
+    <label class="form-control-label">Description</label>
+    <input class="form-control form-control-lg" type="text" name="description" id="description"><br><br>
+
+    <label class="form-control-label">Test Asset</label>
+    <input class="form-control form-control-lg" type="text" name="test_asset" id="test_asset"><br><br>
+
+    <input class="btn btn-outline-info" type="submit" value="Update Test Case">
+    </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+ {% block content %}
+ <h1 class="h1 text-center">Test Case Details</h1><br>
+    <h3 class="h3 text-center text-secondary col">Title: {{ testcases.Title }}</h3><br>
+    <h3 class="h3 text-center text-secondary col">Description: {{ testcases.description }}</h3><br>
+    <h3 class="h3 text-center text-secondary col">Test Asset: {{ testcases.test_asset }}</h3><br>
+    <h3 class="h3 text-center text-secondary col">Date created: {{ testcases.dateCreated }}</h3><br>
+    <br> <br>
+{% endblock %}
